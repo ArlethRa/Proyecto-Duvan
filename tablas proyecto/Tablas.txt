@@ -1,5 +1,17 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.13" pages="2">
-    <mxGraphModel dx="1674" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" 
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;html=
+create table usuarios (
+cedula int primary key not null, 
+nombre varchar(20),
+apellido varchar(20),
+usuario varchar(20)
+);
+
+CREATE TABLE `proyectoapi`.`productos` (
+  `id_productos` INT NOT NULL AUTO_INCREMENT,
+  `nom_productos` VARCHAR(45) NULL,
+  `cantidad` INT NULL,
+  `productoscol` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_productos`));
+
+ALTER TABLE `proyectoapi`.`usuarios` 
+ADD COLUMN `telefono` VARCHAR(45) NULL AFTER `usuario`;
+
